@@ -7,10 +7,16 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
+import { SettingsComponent } from './settings/settings.component';
+import { ListComponent } from './list/list.component';
+import { ExerciseComponent } from './exercise/exercise.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SettingsComponent,
+    ListComponent,
+    ExerciseComponent
   ],
   imports: [
     BrowserModule,
