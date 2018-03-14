@@ -1,0 +1,20 @@
+<mat-toolbar color="accent">
+  <span>
+    Routines
+  </span>
+  <span class="flexSpace"></span>
+  <span>
+    <button mat-icon-button [routerLink]="['/routines/new']">
+      <mat-icon>add</mat-icon>
+    </button>
+  </span>
+</mat-toolbar>
+
+<mat-nav-list>
+  <mat-list-item>
+    <a [routerLink]="['/routines/new']">New Routine</a>
+
+  </mat-list-item>
+
+  <a mat-list-item [routerLink]="['/routines','1231245']">Routine 1231245</a>
+</mat-nav-list>

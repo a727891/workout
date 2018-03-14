@@ -1,0 +1,25 @@
+.headerbar{
+  display: flex;
+  justify-content: space-between;
+}
+
+.user{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.userInfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.userInfo *{
+  margin-left: 0.5em;
+}
+
+.userInfo img{
+  width:48px;
+  height: 48px;
+  border-radius: 24px;
+}

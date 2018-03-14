@@ -1,3 +1,26 @@
-<p>
-  settings works!
-</p>
+<div *ngIf="auth.user | async; then authenticated else guest">
+  <!-- template will replace this div -->
+</div>
+
+
+
+<!-- User NOT logged in -->
+<ng-template #guest>
+  <button mat-button (click)="auth.googleLogin()"> Login With Google</button>
+</ng-template>
+
+
+<!-- User logged in -->
+<ng-template #authenticated>
+  <div *ngIf="auth.user | async as user" class="userInfo">
+    <dl>
+      <dt>Name:</dt>
+      <dd>{{ user.displayName }}</dd>
+      <dt>User Id:</dt>
+      <dd>{{ user.uid }}</dd>
+    </dl>
+
+    <button class="logout" mat-button color="warn" (click)="auth.signOut()">Sign Out</button>
+
+  </div>
+</ng-template>

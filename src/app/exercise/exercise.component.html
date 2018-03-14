@@ -1,3 +1,22 @@
-<p>
-  exercise works!
-</p>
+<mat-toolbar color="accent">
+    <button mat-icon-button [routerLink]="['/routines',routineId]">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+    <span>{{exerciseId}}</span>
+    <span class="flexSpace"></span>
+    <span>
+      <button mat-icon-button [matMenuTriggerFor]="appMenu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #appMenu="matMenu">
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item>Help</button>
+      </mat-menu>
+
+    </span>
+
+  </mat-toolbar>
+
+  <mat-list>
+
+  </mat-list>
